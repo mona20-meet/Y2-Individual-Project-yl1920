@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+
+}
+
+.button{
+  color:black;
+  font-color:white;
+
+}
+.card {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+#feed{
+margin:100px;
+
+}
+
+</style>
+</head>
+
+
+
+
+
+<!-- bodyyyyyy -->
+
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="{{url_for('mainpage')}}">main page</a>
+  <a href="{{url_for('submit')}}">Contact</a>
+
+</div>
+
+<div id="main">
+  <button  class="openbtn" onclick="openNav()">☰</button>  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<!--<div style="width: 980px; margin: 0 auto; overflow:hidden;">-->
+ <div><div >
+ <center> <h1 style="font-size:70px;">Read and Learn</h1></center></div>>
+  <br>
+  <br>
+  <br>
+   <div class="card">
+  <p> <img src="../static/math2.jpeg" style="width: 100%"/><p>
+  <h2>how to pass math</h2>
+  <p>tips and tricks that can help you pass math and get better grades</p>
+ 
+  <p><a href = "{{url_for('matharticle')}}"><button class="w3-button w3-black w3-round-xlarge" style="width:130px;height:40px;">read</button></a></p>
+          <p>
+        <button  onclick="myfunction()" type="button" class="btn btn-default btn-sm">
+          <span id="this" class="glyphicon glyphicon-thumbs-up"></span> Like
+        </button>
+                <button onclick='myFunction()' type="button" class="btn btn-default btn-sm">
+          <span id="thisone" class="glyphicon glyphicon-thumbs-down"></span> Dislike
+        </button>
+      </p>
+</div>
+<div class="card">
+  <p> <img src="../static/bio2.jpg" style="width: 100%"/><p>
+  <h2>Biology 101</h2>
+  <p>ACE Biology and be the top of your class</p>
+ 
+  <p><a href = "{{url_for('bioarticle')}}"><button class="w3-button w3-black w3-round-xlarge" style="width:130px;height:40px;">read</button></a></p>
+        <p>
+        <button  onclick="myfunction()" type="button" class="btn btn-default btn-sm">
+          <span id="this" class="glyphicon glyphicon-thumbs-up"></span> Like
+        </button>
+                <button onclick='myFunction()' type="button" class="btn btn-default btn-sm">
+          <span id="thisone" class="glyphicon glyphicon-thumbs-down"></span> Dislike
+        </button>
+      </p>
+</div>
+
+<script>
+function myfunction() {
+  document.getElementById("this").style.color = "blue";
+}
+</script>
+<script>
+function myFunction() {
+  document.getElementById("thisone").style.color = "red";
+}
+</script>
+
+
+<div class="card">
+  <p> <img src="../static/math3.jpg" style="width: 100%"/><p>
+  <h2>Math 101</h2>
+  <p>ACE Math and be the top of your class</p>
+ 
+  <p><a href = "{{url_for('matharticle')}}"><button class="w3-button w3-black w3-round-xlarge" style="width:130px;height:40px;">read</button></a></p>
+          <p>
+        <button  onclick="myfunction()" type="button" class="btn btn-default btn-sm">
+          <span id="this" class="glyphicon glyphicon-thumbs-up"></span> Like
+        </button>
+                <button onclick='myFunction()' type="button" class="btn btn-default btn-sm">
+          <span id="thisone" class="glyphicon glyphicon-thumbs-down"></span> Dislike
+        </button>
+      </p>
+</div>
+
+<div class="card">
+  <p> <img src="../static/bio2.jpg" style="width: 100%"/><p>
+  <h2>Biology 101</h2>
+  <p>ACE Biology and be the top of your class</p>
+ 
+  <p><a href = "{{url_for('bioarticle')}}"><button class="w3-button w3-black w3-round-xlarge" style="width:130px;height:40px;">read</button></a></p>
+          <p>
+        <button  onclick="myfunction()" type="button" class="btn btn-default btn-sm">
+          <span id="this" class="glyphicon glyphicon-thumbs-up"></span> Like
+        </button>
+                <button onclick='myFunction()' type="button" class="btn btn-default btn-sm">
+          <span id="thisone" class="glyphicon glyphicon-thumbs-down"></span> Dislike
+        </button>
+      </p>
+</div>
+
+
+
+</div>
+   
+
+
+
+
+<a href="">
+<img border="0" alt="W3Schools" src="logo_w3s.gif" width="100" height="100">
+</a>
+
+
+
+
+</body>
+</html> 

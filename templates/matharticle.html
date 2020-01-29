@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to Pass Math</title>
+
+<style type="text/css">
+#feed{
+text-align: center;
+font-family: "Lato", sans-serif;
+font-size: 30px;
+margin: 5%;
+}
+
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="{{url_for('mainpage')}}">main page</a>
+  <a href="{{url_for('submit')}}">Contact</a>
+  <a href="{{url_for('home')}}">Home</a>
+
+
+</div>
+
+<div id="main">
+  <button  class="openbtn" onclick="openNav()">☰</button>  
+</div><br>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+
+	<div id="feed" >
+<h1>How to Pass a Math Test</h1>
+<img src="../static/math.jpg">
+
+<p>   <h3> Take good notes.</h3><br> You don't have to transcribe your instructor's lessons word for word--it's more important to listen than to take perfect notes! Instead, think about the gist. Note any keywords, definitions and step-by-step instructions.<br>
+   <h3> Do your homework.</h3><br> It's always a drag, but it's there to help. The work may be a little repetitive, but going over a type of problem or formula over and over is a good way to reinforce what you've learned. Moreover, doing your homework is a surefire way to identify any material you may be having trouble with.<br>
+   <h3> Make sure you sort out all the test details in advance.</h3> <br>This includes where and when you need to take the test, what is actually going to be on the test and what you need to bring.<br>
+   <h3> Study, study, study!</h3><br> You don't need to wait until the night before to load up on caffeine and cram until the wee hours (unless that really works for you)! Make things a little easier on your nerves by studying throughout the weeks before your test. You can review your material and homework, make flashcards to help you memorize formulas, or even set up a study group with your friends. </p>
+   <div>
+
+
+</body>
+</html>
